@@ -43,7 +43,7 @@ def main():
             print("Wrong file name")
             return
         # try:
-        with open(fails, "r") as f:
+        with open(fails) as f:
             n = int(f.readline().strip())
             parents = list(map(int, f.readline().strip().split()))
         # except FileNotFoundError:
