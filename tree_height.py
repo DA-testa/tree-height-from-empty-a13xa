@@ -38,14 +38,14 @@ def main():
         n = int(input())
         parents = list(map(int, input().split()))
     else:
-        fails = "./test/" + input("Input filename(01-25): ") + "\r"
+        fails = "./test/" + input("Input filename(01-25): ")
         if "a" in fails:
             print("Wrong file name")
             return
         # try:
         with open(fails, "r", encoding='utf-8') as f:
             n = int(f.readline().strip())
-            parents = list(map(int, f.readline().strip().split()))
+            parents = list(map(int, f.readline().strip().rstrip('\r').split()))
         # except FileNotFoundError:
         #     print("File not found")
         #     return
