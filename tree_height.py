@@ -42,13 +42,13 @@ def main():
         if "a" in fails:
             print("Wrong file name")
             return
-        try:
-            with open(fails, "r", encoding='utf-8') as f:
-                n = int(f.readline().strip())
-                parents = list(map(int, f.readline().strip().split()))
-        except FileNotFoundError:
-            print("File not found")
-            return
+        # try:
+        with open(fails, "r", encoding='utf-8') as f:
+            n = int(f.readline().strip())
+            parents = list(map(int, f.readline().strip().split()))
+        # except FileNotFoundError:
+        #     print("File not found")
+        #     return
     # input number of elements
     # input values in one variable, separate with space, split these values in an array
     # call the function and output it's result
