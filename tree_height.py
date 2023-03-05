@@ -37,7 +37,7 @@ def main():
     if ievade.upper() == "I":
         n = int(input())
         parents = list(map(int, input().split()))
-    else:
+    elif ievade.upper() == "F":
         fails = "./test/" + input("Input filename(01-25): ")
         if "a" in fails:
             print("Wrong file name")
@@ -49,6 +49,9 @@ def main():
         except FileNotFoundError:
             print("File not found")
             return
+    else:
+        print("Wrong input")
+        return
     # input number of elements
     # input values in one variable, separate with space, split these values in an array
     # call the function and output it's result
