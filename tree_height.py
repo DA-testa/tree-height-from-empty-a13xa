@@ -43,9 +43,9 @@ def main():
             print("Wrong file name")
             return
         # try:
-        with open(fails, "r", encoding='utf-8') as f:
+        with open(fails, "r") as f:
             n = int(f.readline().strip())
-            parents = list(map(int, f.readline().strip().rstrip('\r').split()))
+            parents = list(map(int, f.readline().strip().split()))
         # except FileNotFoundError:
         #     print("File not found")
         #     return
