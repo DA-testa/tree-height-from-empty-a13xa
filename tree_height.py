@@ -39,7 +39,6 @@ def main():
         if "a" in fails:
             print("Wrong file name")
             return
-        # try:
         with open(fails) as f:
             n = int(f.readline())
             parents = list(map(int, f.readline().split()))
