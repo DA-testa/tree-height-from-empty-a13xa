@@ -30,16 +30,18 @@ def main():
     ievade = input("Input I or F: ")
     # let user input file name to use, don't allow file names with letter a
     # account for github input inprecision
-    while ievade.upper() not in ["I", "F"]:
-        ievade = input("Wrong input. Input I or F: ")
+    if ievade.upper() not in ["I", "F"]:
+        print("Wrong input")
+        return
 
     if ievade.upper() == "I":
         n = int(input())
         parents = list(map(int, input().split()))
     else:
         fails = "./test/" + input("Input filename(01-25): ")
-        while "a" in fails:
-            fails = input("Wrong file name. Input folder/file_n: ")
+        if "a" in fails:
+            print("File not found")
+            return
         try:
             with open(fails, "r", encoding='utf-8') as f:
                 n = int(f.readline().strip())
