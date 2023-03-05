@@ -38,7 +38,7 @@ def main():
         n = int(input())
         parents = list(map(int, input().split()))
     else:
-        fails = "./test/" + input("Input filename(01-25): ")
+        fails = "./test/" + input("Input filename(01-25): ") + "\r"
         if "a" in fails:
             print("Wrong file name")
             return
